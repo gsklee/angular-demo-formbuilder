@@ -3,6 +3,7 @@
 angular.module('angularDemoFormbuilderApp').
 
 controller('AsideCtrl', function(
+    Form
 ){
     this.inputTypes = [
         'button',
@@ -29,13 +30,21 @@ controller('AsideCtrl', function(
         'url',
         'week'
     ];
+
+    this.addToForm = function(options) {
+        /*
+        // options {
+        //     element
+        //     type
+        // }
+        */
+
+        Form.components.push(options);
+    };
 }).
 
 controller('MainCtrl', function(
+    Form
 ){
-    this.awesomeThings = [
-        'HTML5 Boilerplate',
-        'AngularJS',
-        'Karma'
-    ];
+    this.Form = Form;
 });
