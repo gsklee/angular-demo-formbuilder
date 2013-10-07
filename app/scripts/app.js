@@ -15,8 +15,16 @@ config(function(
     
     state('root', {
         url: '/',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl as main'
+        views: {
+            'aside': {
+                templateUrl: 'views/aside.html',
+                controller: 'AsideCtrl as aside'
+            },
+            '': {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl as main'
+            }
+        }
     });
 
     $urlRouterProvider.otherwise('/');

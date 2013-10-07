@@ -12,8 +12,12 @@
     </head>
 
     <body ng-app="angularDemoFormbuilderApp">
-        <!-- Add your site or application content here -->
-        <ui-view class="container"></ui-view>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div ui-view="aside" class="span2"></div>
+                <div ui-view class="span10"></div>
+            </div>
+        </div>
 
         <script src="components/angular/angular.js"></script>
 
