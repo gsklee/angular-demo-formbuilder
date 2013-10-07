@@ -1,5 +1,5 @@
 <main>
     <div class="hero-unit" ng-repeat="component in main.Form.components" ui-sref="field-settings">
-        <input type="{{component.type}}">
+        <input type="{{component.type}}" ng-click="$event.stopPropagation()">
     </div>
 </main>
