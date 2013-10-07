@@ -39,6 +39,20 @@ config(function(
                 controller: 'MainCtrl as main'
             }
         }
+    }).
+
+    state('form-settings', {
+        url: '/form-settings',
+        views: {
+            'aside': {
+                templateUrl: 'views/aside.form-settings.html',
+                controller: 'AsideCtrl as aside'
+            },
+            '': {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl as main'
+            }
+        }
     });
 
     $urlRouterProvider.otherwise('/');
