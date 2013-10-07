@@ -1,20 +1,23 @@
 'use strict';
 
 angular.module('angularDemoFormbuilderApp', [
-    'ngRoute'
+    'ui.router'
 ]).
 
 config(function(
-    $routeProvider
+    $locationProvider,
+    $stateProvider,
+    $urlRouterProvider
 ){
-    $routeProvider.
+    $locationProvider.html5Mode(true);
+
+    $stateProvider.
     
-    when('/', {
+    state('root', {
+        url: '/',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-    }).
-    
-    otherwise({
-        redirectTo: '/'
+        controller: 'MainCtrl as main'
     });
+
+    $urlRouterProvider.otherwise('/');
 });
