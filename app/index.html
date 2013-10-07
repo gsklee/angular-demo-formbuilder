@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title></title>
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+
+    <body ng-app="angularDemoFormbuilderApp">
+        <!-- Add your site or application content here -->
+        <ng-view class="container"></ng-view>
+
+        <script src="components/angular/angular.js"></script>
+
+        <!-- build:js scripts/modules.js -->
+        <script src="components/angular-route/angular-route.js"></script>
+        <script src="components/angular-resource/angular-resource.js"></script>
+        <script src="components/angular-sanitize/angular-sanitize.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
