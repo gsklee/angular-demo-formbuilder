@@ -6,7 +6,7 @@ controller('AsideCtrl', function(
     Form
 ){
     this.inputTypes = [
-        'submit',
+        'number',
         'text'
     ];
 
