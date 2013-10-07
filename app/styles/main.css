@@ -13,6 +13,11 @@ body {
     background-color: #eee;
     border-radius: 6px;
     padding: 60px;
+    cursor: pointer;
+}
+
+.hero-unit:hover {
+    background-color: #e3e3e3;
 }
 
 .hero-unit h1 {

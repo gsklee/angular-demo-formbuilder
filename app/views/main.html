@@ -1,3 +1,5 @@
-<main class="hero-unit">
-    <input type="{{component.type}}" ng-repeat="component in main.Form.components">
+<main>
+    <div class="hero-unit" ng-repeat="component in main.Form.components" ui-sref="field-settings">
+        <input type="{{component.type}}">
+    </div>
 </main>
