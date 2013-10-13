@@ -5,6 +5,8 @@ angular.module('angularDemoFormbuilderApp').
 controller('AsideCtrl', function(
     Form
 ){
+    this.Form = Form;
+
     this.inputTypes = [
         'number',
         'text'
@@ -18,7 +20,7 @@ controller('AsideCtrl', function(
         // }
         */
 
-        Form.components.push(options);
+        Form.maxComponent > Form.components.length && Form.components.push(options);
     };
 }).
 
