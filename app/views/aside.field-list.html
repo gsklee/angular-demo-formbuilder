@@ -1,14 +1,4 @@
-<ul class="nav nav-tabs">
-    <li class="active">
-        <a ui-sref="root">Add Component <span class="badge badge-success">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
-    </li>
-    <li>
-        <a ui-sref="field-settings">Edit Component</a>
-    </li>
-    <li>
-        <a ui-sref="form-settings">Edit Form</a>
-    </li>
-</ul>
+<div ui-view="nav"></div>
 <aside>
     <h4>Input</h4>
     <input type="text" class="input-medium search-query" ng-model="aside.search">

@@ -23,6 +23,10 @@ config(function(
             '': {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
+            },
+            'nav@root': {
+                templateUrl: 'views/nav.html',
+                controller: 'AsideCtrl as aside'
             }
         }
     }).
@@ -37,6 +41,10 @@ config(function(
             '': {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
+            },
+            'nav@field-settings': {
+                templateUrl: 'views/nav.html',
+                controller: 'AsideCtrl as aside'
             }
         }
     }).
@@ -51,6 +59,10 @@ config(function(
             '': {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
+            },
+            'nav@form-settings': {
+                templateUrl: 'views/nav.html',
+                controller: 'AsideCtrl as aside'
             }
         }
     });
