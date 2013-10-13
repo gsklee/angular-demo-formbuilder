@@ -1,11 +1,5 @@
 <ul class="nav nav-tabs">
-    <li>
-        <a ui-sref="root">Add Component <span class="badge badge-success">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
-    </li>
-    <li>
-        <a ui-sref="field-settings">Edit Component</a>
-    </li>
-    <li>
-        <a ui-sref="form-settings">Edit Form</a>
+    <li ng-repeat="nav in aside.navs">
+        <a ui-sref="{{nav.state}}">{{nav.text}}<span ng-if="$first" class="badge badge-success">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
     </li>
 </ul>

@@ -7,6 +7,17 @@ controller('AsideCtrl', function(
 ){
     this.Form = Form;
 
+    this.navs = [{
+        text: 'Add Component',
+        state: 'root'
+    }, {
+        text: 'Edit Component',
+        state: 'field-settings'
+    }, {
+        text: 'Edit Form',
+        state: 'form-settings'
+    }];
+
     this.inputTypes = [
         'number',
         'text'

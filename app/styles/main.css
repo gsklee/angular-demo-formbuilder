@@ -29,3 +29,7 @@ body {
 .btn {
     width: 80px;
 }
+
+.badge {
+    margin-left: 5px;
+}
