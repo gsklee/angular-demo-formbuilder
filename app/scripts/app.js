@@ -24,7 +24,7 @@ config(function(
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
             },
-            'nav@root': {
+            '@root': {
                 templateUrl: 'views/nav.html',
                 controller: 'AsideCtrl as aside'
             }
@@ -42,7 +42,7 @@ config(function(
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
             },
-            'nav@field-settings': {
+            '@field-settings': {
                 templateUrl: 'views/nav.html',
                 controller: 'AsideCtrl as aside'
             }
@@ -60,7 +60,7 @@ config(function(
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
             },
-            'nav@form-settings': {
+            '@form-settings': {
                 templateUrl: 'views/nav.html',
                 controller: 'AsideCtrl as aside'
             }
