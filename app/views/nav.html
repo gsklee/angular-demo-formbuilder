@@ -1,5 +1,11 @@
 <ul class="nav nav-tabs">
-    <li ng-repeat="nav in aside.navs">
-        <a ui-sref="{{nav.state}}">{{nav.text}}<span ng-if="$first" class="badge badge-success">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
+    <li ng-repeat="nav in aside.navs" ng-class="{
+        'active': $state.current.name == nav.state
+    }">
+        <a ui-sref="{{nav.state}}">{{nav.text}}<span ng-if="$first" ng-class="{
+            'badge': true,
+            'badge-success': aside.Form.maxComponent > aside.Form.components.length,
+            'badge-warning': aside.Form.maxComponent == aside.Form.components.length
+        }">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
     </li>
 </ul>
