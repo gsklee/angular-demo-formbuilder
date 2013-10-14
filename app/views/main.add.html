@@ -2,7 +2,7 @@
 <input class="input-medium search-query" ng-model="aside.search">
 <hr>
 <div class="btn-group btn-group-vertical">
-    <button class="btn btn-mini btn-primary" ng-repeat="inputType in aside.inputTypes | filter: aside.search" ng-click="aside.addToForm({
+    <button class="btn btn-mini btn-primary" ng-repeat="inputType in aside.inputTypes | filter: aside.search" ng-click="aside.addComponent({
         element: 'input',
         label: inputType,
         type: inputType
