@@ -42,16 +42,18 @@ config(function(
             '': {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl as main'
-            },
-            '@field-settings': {
-                templateUrl: 'views/nav.html',
-                controller: 'AsideCtrl as aside'
             }
         }
     }).
 
     state('field-settings.child-state', {
-        url: '/{componentId}'
+        url: '/{componentId}',
+        views: {
+            '': {
+                templateUrl: 'views/nav.html',
+                controller: 'AsideCtrl as aside'
+            }
+        }
     }).
 
     state('form-settings', {
