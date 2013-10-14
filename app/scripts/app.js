@@ -32,6 +32,7 @@ config(function(
     }).
 
     state('field-settings', {
+        abstract: true,
         url: '/field-settings',
         views: {
             'aside': {
@@ -47,6 +48,10 @@ config(function(
                 controller: 'AsideCtrl as aside'
             }
         }
+    }).
+
+    state('field-settings.child-state', {
+        url: '/{componentId}'
     }).
 
     state('form-settings', {
