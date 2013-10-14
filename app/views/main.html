@@ -1,5 +1,14 @@
-<main>
-    <div class="hero-unit" ng-repeat="component in main.Form.components" ui-sref="field-settings">
-        <input type="{{component.type}}" ng-click="$event.stopPropagation()">
+<main class="hero-unit">
+    <div class="form-header" ui-sref="form-settings">
+        <h1>{{main.Form.title}}</h1>
+        <p>{{main.Form.description}}</p>
     </div>
+    <form class="form-horizontal">
+        <div class="control-group" ng-repeat="component in main.Form.components" ui-sref="field-settings">
+            <label class="control-label">{{component.label}}</label>
+            <div class="controls">
+                <input type="{{component.type}}" ng-click="$event.stopPropagation()">
+            </div>
+        </div>
+    </form>
 </main>
