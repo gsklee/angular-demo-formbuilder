@@ -44,4 +44,8 @@ controller('AsideCtrl', function(
 
         Form.components.isFull() || Form.components.push(options);
     };
+
+    this.deleteComponent = function(componentId) {
+        Form.components.splice(componentId, 1);
+    };
 });

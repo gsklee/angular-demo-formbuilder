@@ -1,1 +1,7 @@
-<h4>Field Settings</h4>
+<form>
+    <label>Label</label>
+    <input ng-model="main.Form.components[$stateParams.componentId].label">
+    <label>Type</label>
+    <select ng-model="main.Form.components[$stateParams.componentId].type" ng-options="inputType as inputType for inputType in aside.inputTypes"></select>
+    <button class="btn btn-danger" ng-click="aside.deleteComponent($stateParams.componentId)">Delete</button>
+</form>
