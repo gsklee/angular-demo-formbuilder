@@ -9,13 +9,13 @@ controller('AsideCtrl', function(
 
     this.navs = [{
         text: 'Add Component',
-        state: 'root'
+        state: 'main.add'
     }, {
         text: 'Edit Component',
-        state: 'field-settings.child-state({componentId: 0})'
+        state: 'main.editComponent({componentId: 0})'
     }, {
         text: 'Edit Form',
-        state: 'form-settings'
+        state: 'main.editForm'
     }];
 
     this.inputTypes = [

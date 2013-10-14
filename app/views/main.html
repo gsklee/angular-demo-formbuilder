@@ -1,14 +1,32 @@
-<main class="hero-unit">
-    <div class="form-header" ui-sref="form-settings">
-        <h1>{{main.Form.title}}</h1>
-        <p>{{main.Form.description}}</p>
-    </div>
-    <form class="form-horizontal">
-        <div class="control-group" ng-repeat="component in main.Form.components" ui-sref="field-settings.child-state({componentId: $index})">
-            <label class="control-label">{{component.label}}</label>
-            <div class="controls">
-                <input type="{{component.type}}" ng-click="$event.stopPropagation()">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <aside class="span4">
+            <ul class="nav nav-tabs">
+                <li ng-repeat="nav in aside.navs" ng-class="{
+                    'active': $state.current.name == nav.state
+                }">
+                    <a ui-sref="{{nav.state}}">{{nav.text}}<span ng-if="$first" ng-class="{
+                        'badge': true,
+                        'badge-success': aside.Form.maxComponent > aside.Form.components.length,
+                        'badge-warning': aside.Form.maxComponent == aside.Form.components.length
+                    }">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
+                </li>
+            </ul>
+            <ui-view></ui-view>
+        </aside>
+        <main class="span8 hero-unit">
+            <div class="form-header" ui-sref="main.editForm">
+                <h1>{{main.Form.title}}</h1>
+                <p>{{main.Form.description}}</p>
             </div>
-        </div>
-    </form>
-</main>
+            <form class="form-horizontal">
+                <div class="control-group" ng-repeat="component in main.Form.components" ui-sref="main.editComponent({componentId: $index})">
+                    <label class="control-label">{{component.label}}</label>
+                    <div class="controls">
+                        <input type="{{component.type}}" ng-click="$event.stopPropagation()">
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
