@@ -3,6 +3,7 @@
 angular.module('angularDemoFormbuilderApp').
 
 controller('MainCtrl', function(
+    $scope,
     Form
 ){
     this.Form = Form;
@@ -12,11 +13,16 @@ controller('MainCtrl', function(
         state: 'main.add'
     }, {
         text: 'Edit Component',
-        state: 'main.editComponent({componentId: 0})'
+        state: 'main.editComponent',
+        stateParams: '({componentId: 0})'
     }, {
         text: 'Edit Form',
         state: 'main.editForm'
     }];
+
+    $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+        'main.editComponent' === toState.name && toParams.componentId >= Form.components.length && event.preventDefault();
+    });
 }).
 
 controller('AsideCtrl', function(
