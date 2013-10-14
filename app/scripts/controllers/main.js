@@ -12,7 +12,7 @@ controller('AsideCtrl', function(
         state: 'root'
     }, {
         text: 'Edit Component',
-        state: 'field-settings'
+        state: 'field-settings.child-state({componentId: 0})'
     }, {
         text: 'Edit Form',
         state: 'form-settings'
