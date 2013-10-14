@@ -27,6 +27,7 @@ controller('AsideCtrl', function(
         /*
         // options {
         //     element
+        //     label
         //     type
         // }
         */
