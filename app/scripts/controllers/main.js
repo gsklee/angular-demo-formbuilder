@@ -35,6 +35,6 @@ controller('AsideCtrl', function(
         // }
         */
 
-        Form.maxComponent > Form.components.length && Form.components.push(options);
+        Form.components.isFull() || Form.components.push(options);
     };
 });
