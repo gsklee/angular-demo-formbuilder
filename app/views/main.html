@@ -2,14 +2,14 @@
     <div class="row-fluid">
         <aside class="span4">
             <ul class="nav nav-tabs">
-                <li ng-repeat="nav in aside.navs" ng-class="{
+                <li ng-repeat="nav in main.navs" ng-class="{
                     'active': $state.current.name == nav.state
                 }">
                     <a ui-sref="{{nav.state}}">{{nav.text}}<span ng-if="$first" ng-class="{
                         'badge': true,
-                        'badge-success': aside.Form.maxComponent > aside.Form.components.length,
-                        'badge-warning': aside.Form.maxComponent == aside.Form.components.length
-                    }">{{aside.Form.components.length}}/{{aside.Form.maxComponent}}</span></a>
+                        'badge-success': main.Form.maxComponent > main.Form.components.length,
+                        'badge-warning': main.Form.maxComponent == main.Form.components.length
+                    }">{{main.Form.components.length}}/{{main.Form.maxComponent}}</span></a>
                 </li>
             </ul>
             <ui-view></ui-view>
