@@ -3,10 +3,12 @@
 angular.module('angularDemoFormbuilderApp').
 
 service('Form', function(
+    $resource
 ){
-    this.title = 'New Form';
-
-    this.description = '(What\'s this form about?)';
+    $resource('http://gsklee.apiary.io/form').get().$promise.then(function(response) {
+        this.title = response.title;
+        this.description = response.description;
+    }.bind(this));
 
     this.components = []
 

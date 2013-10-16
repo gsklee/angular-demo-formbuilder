@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('angularDemoFormbuilderApp', [
+    'ngResource',
     'ui.router'
 ]).
 
