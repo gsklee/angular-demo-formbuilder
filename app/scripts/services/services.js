@@ -5,9 +5,11 @@ angular.module('angularDemoFormbuilderApp').
 service('Form', function(
     $resource
 ){
-    $resource('http://gsklee.apiary.io/form').get().$promise.then(function(response) {
-        this.title = response.title;
-        this.description = response.description;
+    var _form = $resource('http://gsklee.apiary.io/form').get();
+
+    _form.$promise.then(function(response) {
+        this.title = _form.title;
+        this.description = _form.description;
     }.bind(this));
 
     this.components = []
@@ -17,4 +19,11 @@ service('Form', function(
     this.components.isFull = function() {
         return this.components.length === this.components.maxLength;
     }.bind(this);
+
+    this.save = function() {
+        _form.title = this.title;
+        _form.description = this.description;
+
+        _form.$save();
+    };
 });
