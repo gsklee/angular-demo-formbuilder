@@ -1,17 +1,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <aside class="span4">
-            <ul class="nav nav-tabs">
-                <li ng-repeat="nav in main.navs" ng-class="{
-                    'active': $state.is(nav.state)
-                }">
-                    <a ui-sref="{{nav.state + nav.stateParams}}">{{nav.text}}<span ng-if="$first" ng-class="{
-                        'badge': true,
-                        'badge-success': !main.Form.components.isFull(),
-                        'badge-warning': main.Form.components.isFull()
-                    }">{{main.Form.components.length}}/{{main.Form.components.maxLength}}</span></a>
-                </li>
-            </ul>
+            <app-nav></app-nav>
             <ui-view></ui-view>
         </aside>
         <main class="span8 hero-unit">
