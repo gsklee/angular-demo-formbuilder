@@ -4,6 +4,7 @@ angular.module('angularDemoFormbuilderApp').
 
 controller('MainCtrl', function(
     $scope,
+    $window,
     Form
 ){
     this.Form = Form;
@@ -23,6 +24,12 @@ controller('MainCtrl', function(
     $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
         'main.editComponent' === toState.name && toParams.componentId >= Form.components.length && event.preventDefault();
     });
+
+    $scope.$watch(function() {
+        return this.Form;
+    }.bind(this), function() {
+        this.lastUpdated = +new $window.Date;
+    }.bind(this), true);
 }).
 
 controller('AsideCtrl', function(
