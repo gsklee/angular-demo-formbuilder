@@ -2,6 +2,7 @@
 
 angular.module('angularDemoFormbuilderApp', [
     'ngResource',
+    'ngAnimate',
     'ngSanitize',
     'ngStorage',
     'ui.router'

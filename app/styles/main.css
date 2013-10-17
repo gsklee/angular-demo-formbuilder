@@ -44,3 +44,27 @@ textarea {
 .badge {
     margin-left: 5px;
 }
+
+/*
+// Rotate-In
+*/
+
+.rotate.ng-enter,
+.rotate.ng-leave {
+    -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotate.ng-enter,
+.rotate.ng-leave.ng-leave-active {
+    -webkit-transform: rotate3d(1, 2, 3, 180deg);
+    transform: rotate3d(1, 2, 3, 180deg);
+    opacity: 0.7;
+}
+
+.rotate.ng-enter.ng-enter-active,
+.rotate.ng.leave {
+    -webkit-transform: rotate3d(3, 6, 2, 0);
+    transform: rotate3d(3, 6, 2, 0);
+    opacity: 1;
+}
