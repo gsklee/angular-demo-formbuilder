@@ -5,8 +5,13 @@ angular.module('angularDemoFormbuilderApp').
 controller('MainCtrl', function(
     $scope,
     $window,
+    $localStorage,
     Form
 ){
+    this.$storage = $localStorage.$default({
+        lastUpdated: +new $window.Date
+    });
+
     this.Form = Form;
 
     this.navs = [{
@@ -28,7 +33,7 @@ controller('MainCtrl', function(
     $scope.$watch(function() {
         return this.Form;
     }.bind(this), function() {
-        this.lastUpdated = +new $window.Date;
+        $localStorage.lastUpdated = +new $window.Date;
     }.bind(this), true);
 }).
 

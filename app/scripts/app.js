@@ -3,6 +3,7 @@
 angular.module('angularDemoFormbuilderApp', [
     'ngResource',
     'ngSanitize',
+    'ngStorage',
     'ui.router'
 ]).
 

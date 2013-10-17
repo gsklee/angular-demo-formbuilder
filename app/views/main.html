@@ -15,7 +15,7 @@
             <ui-view></ui-view>
         </aside>
         <main class="span8 hero-unit">
-            <h6 class="text-right">Last Updated: {{main.lastUpdated | date:'yyyy-MM-dd HH:mm:ss Z'}}</h6>
+            <h6 class="text-right">Last Updated: {{main.$storage.lastUpdated | date:'yyyy-MM-dd HH:mm:ss Z'}}</h6>
             <div class="form-header" ui-sref="main.editForm">
                 <h1>{{main.Form.title}}</h1>
                 <p ng-bind-html="main.Form.description"></p>
