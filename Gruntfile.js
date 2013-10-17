@@ -285,10 +285,35 @@ module.exports = function (grunt) {
       ]
     },
     karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      }
+        unit: {
+            options: {
+                files: [
+                    'app/components/angular/angular.js',
+                    'app/components/angular-mocks/angular-mocks.js',
+                    'app/components/chai/chai.js',
+
+                    'app/components/angular-resource/angular-resource.js',
+                    'app/components/angular-animate/angular-animate.js',
+                    'app/components/angular-sanitize/angular-sanitize.js',
+                    'app/components/ngstorage/ngStorage.js',
+                    'app/components/angular-ui-router/release/angular-ui-router.js',
+
+                    'app/scripts/*.js',
+                    'app/scripts/**/*.js',
+                    'test/mock/**/*.js',
+                    'test/spec/**/*.js'
+                ]
+            },
+
+            frameworks: ['mocha'],
+
+            browsers: [
+                'Chrome',
+                'Firefox'
+            ],
+
+            singleRun: true
+        }
     },
     cdnify: {
       dist: {
