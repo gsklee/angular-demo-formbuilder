@@ -14,7 +14,7 @@
                 <div class="control-group" ng-repeat="component in main.Form.components" ui-sref="main.editComponent({componentId: $index})">
                     <label class="control-label">{{component.label}}</label>
                     <div class="controls">
-                        <input type="{{component.type}}" ng-click="$event.stopPropagation()">
+                        <input type="{{component.type}}" app-no-bubbling="click">
                     </div>
                 </div>
             </form>
