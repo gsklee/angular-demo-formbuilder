@@ -17,7 +17,7 @@
         <main class="span8 hero-unit">
             <div class="form-header" ui-sref="main.editForm">
                 <h1>{{main.Form.title}}</h1>
-                <p>{{main.Form.description}}</p>
+                <p ng-bind-html="main.Form.description"></p>
             </div>
             <form class="form-horizontal">
                 <div class="control-group" ng-repeat="component in main.Form.components" ui-sref="main.editComponent({componentId: $index})">

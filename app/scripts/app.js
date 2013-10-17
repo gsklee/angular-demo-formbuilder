@@ -2,6 +2,7 @@
 
 angular.module('angularDemoFormbuilderApp', [
     'ngResource',
+    'ngSanitize',
     'ui.router'
 ]).
 
